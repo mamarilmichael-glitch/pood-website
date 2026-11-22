@@ -118,3 +118,7 @@ footer{border-top:1px solid var(--line); padding:36px 0;}
 .lab-grid{display:grid; gap:14px; margin-top:36px;}
 @media(min-width:640px){.lab-grid{grid-template-columns:1fr 1fr;}}
 .lab-card{border-radius:20px; background:rgba(255,255,255,0.04); padding:20px;}
+
+form.wl select{width:100%; border:none; border-radius:100px; background:rgba(255,255,255,0.4); padding:14px 20px; color:var(--ink); font-family:'Manrope',sans-serif; font-weight:600;}
+form.wl select:focus{outline:2px solid var(--ink);}
+@media(min-width:640px){form.wl{flex-wrap:wrap;} form.wl select{flex:1 1 100%;}}
