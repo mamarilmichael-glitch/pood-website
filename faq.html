@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b6b2a85f-f6bd-4d61-90bc-135df9ec29af
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POOD FAQ — Ingredients, Guarantee & How It Works</title>
+<meta name="description" content="Ingredients, guarantee terms, and answers to the most common questions about POOD laundry Poods.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="marquee">&#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733; BUILT FOR TRAINING DAYS &#9733; STILL SMELLS? FULL REFUND &#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733;</div>
+<header>
+  <nav class="bar">
+    <a class='logo' href='/'>POOD</a>
+    <div class="navlinks">
+      <a href='/how-it-works'>How it works</a>
+      <a href='/about'>About</a>
+      <a href='/faq'>FAQ</a>
+    </div>
+    <a class='btn btn-ghost' href='/#waitlist'>Register interest</a>
+  </nav>
+</header>
+<main>
+
+<section class="page-hero" style="padding-bottom:0;">
+  <div class="wrap" style="max-width:680px;">
+    <span class="eyebrow">FAQ</span>
+    <h1>Ingredients, guarantee &amp; how it works</h1>
+  </div>
+</section>
+<section style="padding-top:36px;">
+  <div class="wrap" style="max-width:680px;">
+    <div style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What is POOD?</span><span class="icon">−</span></button>
+        <div class="faq-a"><p>POOD is a laundry Pood formulated with an antibacterial agent and enzyme-based cleaning to target odour-causing bacteria in the fabric, finished with a scent hit, not detergent.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Is this just AthleteRX with better marketing?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>No. POOD uses a similar category of active ingredients already trusted in this space, but in a Pood format — which carries more active ingredient per dose than a sheet — with a genuine fragrance layer specialist odour brands deliberately avoid.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What fragrance does POOD come in?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>We haven't decided yet. We're testing real fragrance concepts with real trainers to find the one that actually works before we commit to it.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Is it safe with kids or pets around?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>Any concentrated laundry Pood needs to be stored in child-resistant packaging and kept out of reach — a non-negotiable requirement built into POOD's packaging from day one.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What if it doesn't work for me?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>Full refund. If your kit still smells after using POOD as directed, we refund you — in full, no argument.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>When will POOD actually be available?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>We're currently validating demand before purchasing inventory — no launch date is set yet. Registering your interest means we'll email you with real details before anything is available to buy.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Will I be charged anything by registering my interest?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>No. Registering only collects your email. No payment is taken, and POOD is not yet available for purchase.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What are the ingredients?</span><span class="icon">+</span></button>
+        <div class="faq-a"><p>Sodium lauryl sulfate, sodium C14-16 olefin sulfonate, polyvinyl alcohol, glycerin, sodium citrate, perfume, and silver ion (antibacterial agent).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p class="footer-note">POOD is currently in pre-launch validation. No product is available for purchase yet.</p>
+    <div class="footer-row">
+      <span>&copy; 2026 POOD Laundry Co.</span>
+      <nav><a href='/privacy'>Privacy Policy</a><a href='/terms'>Terms of Service</a><a href='/contact'>Contact</a></nav>
+      <a href="mailto:hello@pood.co">hello@pood.co</a>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleFaq(btn){
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); const ic=i.querySelector('.icon'); if(ic) ic.textContent='+'; });
+    if(!wasOpen){ item.classList.add('open'); btn.querySelector('.icon').textContent = '\u2212'; }
+  }
+  function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      form.style.display = 'none';
+      form.nextElementSibling.style.display = 'block';
+    })
+    .catch(() => {
+      alert("Something went wrong - please try again, or email hello@pood.co directly.");
+    });
+    return false;
+  }
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="b6b2a85f-f6bd-4d61-90bc-135df9ec29af" data-app-host="app.netlify.com" data-account-tier="free"></script>

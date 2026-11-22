@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b6b2a85f-f6bd-4d61-90bc-135df9ec29af
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How POOD Works — Odour Defence Meets Real Fragrance</title>
+<meta name="description" content="See exactly how POOD targets odour-causing bacteria in fabric while delivering a real, lasting fragrance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="marquee">&#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733; BUILT FOR TRAINING DAYS &#9733; STILL SMELLS? FULL REFUND &#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733;</div>
+<header>
+  <nav class="bar">
+    <a class='logo' href='/'>POOD</a>
+    <div class="navlinks">
+      <a href='/how-it-works'>How it works</a>
+      <a href='/about'>About</a>
+      <a href='/faq'>FAQ</a>
+    </div>
+    <a class='btn btn-ghost' href='/#waitlist'>Register interest</a>
+  </nav>
+</header>
+<main>
+
+<section class="page-hero hairline">
+  <div class="wrap" style="max-width:680px;">
+    <span class="eyebrow">How It Works</span>
+    <h1>Two jobs. One Pood.</h1>
+    <p style="margin-top:22px; font-size:17px; color:var(--smoke); max-width:560px;">Formulated with an antibacterial agent and enzyme-based cleaning to target odour-causing bacteria in the fabric — with a fragrance layered on top, not instead of it.</p>
+  </div>
+</section>
+<section class="hairline">
+  <div class="wrap" style="max-width:680px;">
+    <h2 style="font-size:24px; margin-bottom:28px;">The mechanism</h2>
+    <div style="border-top:1px solid var(--line); padding-top:22px; margin-bottom:28px;">
+      <img src="box-enzyme.png" alt="Enzyme-based cleaning breaking down odour at the fibre level" style="width:100%; max-width:320px; aspect-ratio:16/10; object-fit:cover; border-radius:16px; margin-bottom:12px;">
+      <h3 style="font-size:17px;">Enzyme-Based Cleaning</h3>
+      <p style="margin-top:8px; font-size:14px; color:var(--smoke);">Breaks down stains and ground-in odour at the fibre level.</p>
+    </div>
+    <div style="border-top:1px solid var(--line); padding-top:22px;">
+      <img src="box-antibacterial.png" alt="Antibacterial agent targeting odour-causing bacteria in the fabric" style="width:100%; max-width:320px; aspect-ratio:16/10; object-fit:cover; border-radius:16px; margin-bottom:12px;">
+      <h3 style="font-size:17px;">Antibacterial Agent</h3>
+      <p style="margin-top:8px; font-size:14px; color:var(--smoke);">Formulated with a silver-ion antibacterial agent, targeting odour-causing bacteria in the fabric itself.</p>
+    </div>
+    <p class="fine" style="margin-top:28px;">Laboratory substantiation of finished-formula performance is pending.</p>
+  </div>
+</section>
+<section class="hairline">
+  <div class="wrap" style="max-width:680px;">
+    <h2 style="font-size:24px; margin-bottom:14px;">What we don't say (and why)</h2>
+    <p style="color:var(--smoke); font-size:15px; line-height:1.6;">You won't see us say &ldquo;kills bacteria,&rdquo; &ldquo;antimicrobial,&rdquo; &ldquo;sanitises,&rdquo; or any percentage claim like &ldquo;99.9%.&rdquo; Those are outcome claims, and outcome claims need laboratory testing and legal clearance we don't have yet.</p>
+  </div>
+</section>
+<section class="hairline">
+  <div class="wrap" style="max-width:680px;">
+    <h2 style="font-size:24px; margin-bottom:14px;">Ingredients</h2>
+    <p style="font-size:14px; color:var(--smoke);">Sodium lauryl sulfate, Sodium C14-16 olefin sulfonate, Polyvinyl alcohol, Glycerin, Sodium citrate, Perfume, Silver ion (antibacterial agent).</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p class="footer-note">POOD is currently in pre-launch validation. No product is available for purchase yet.</p>
+    <div class="footer-row">
+      <span>&copy; 2026 POOD Laundry Co.</span>
+      <nav><a href='/privacy'>Privacy Policy</a><a href='/terms'>Terms of Service</a><a href='/contact'>Contact</a></nav>
+      <a href="mailto:hello@pood.co">hello@pood.co</a>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleFaq(btn){
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); const ic=i.querySelector('.icon'); if(ic) ic.textContent='+'; });
+    if(!wasOpen){ item.classList.add('open'); btn.querySelector('.icon').textContent = '\u2212'; }
+  }
+  function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      form.style.display = 'none';
+      form.nextElementSibling.style.display = 'block';
+    })
+    .catch(() => {
+      alert("Something went wrong - please try again, or email hello@pood.co directly.");
+    });
+    return false;
+  }
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="b6b2a85f-f6bd-4d61-90bc-135df9ec29af" data-app-host="app.netlify.com" data-account-tier="free"></script>

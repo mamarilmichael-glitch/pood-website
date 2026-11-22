@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b6b2a85f-f6bd-4d61-90bc-135df9ec29af
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — POOD</title>
+<meta name="description" content="How POOD handles your personal information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="marquee">&#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733; BUILT FOR TRAINING DAYS &#9733; STILL SMELLS? FULL REFUND &#9733; FORMULATED WITH AN ANTIBACTERIAL AGENT &#9733; ENZYME-BASED CLEANING &#9733;</div>
+<header>
+  <nav class="bar">
+    <a class='logo' href='/'>POOD</a>
+    <div class="navlinks">
+      <a href='/how-it-works'>How it works</a>
+      <a href='/about'>About</a>
+      <a href='/faq'>FAQ</a>
+    </div>
+    <a class='btn btn-ghost' href='/#waitlist'>Register interest</a>
+  </nav>
+</header>
+<main>
+
+<section class="page-hero" style="padding-bottom:50px;">
+  <div class="wrap legal-box">
+    <div class="warn-box">This policy covers what the site actually does today: collecting an email address if you register interest. It should be reviewed by a lawyer before POOD collects payment information, deposits, or any data beyond an email address.</div>
+    <span class="eyebrow">Privacy Policy</span>
+    <h1 style="font-size:34px;">Privacy Policy</h1>
+    <p style="font-size:13px; color:var(--smoke); margin-bottom:28px;">Last updated: 29 August 2026</p>
+    <h2>What we collect</h2>
+    <p>If you register your interest on this site, we collect your email address. We do not currently collect names, phone numbers, addresses, or payment details.</p>
+    <h2>Why we collect it</h2>
+    <p>We use your email address only to contact you about POOD's founding batch, product updates, and launch timing.</p>
+    <h2>How we store it</h2>
+    <p>Your email is stored securely with our hosting/form provider (Netlify) and, if connected, an email service provider. We do not sell or rent your email address.</p>
+    <h2>Cookies and analytics</h2>
+    <p>This site may use basic analytics to understand traffic. No personally identifying analytics tracking is active unless stated otherwise on this page at a later date.</p>
+    <h2>Your rights</h2>
+    <p>You can ask us to remove your email from our list at any time by emailing hello@pood.co.</p>
+    <h2>Future changes</h2>
+    <p>If POOD begins taking payments or deposits, this policy will be updated and reviewed by a qualified lawyer before that change goes live.</p>
+    <h2>Contact</h2>
+    <p>hello@pood.co</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p class="footer-note">POOD is currently in pre-launch validation. No product is available for purchase yet.</p>
+    <div class="footer-row">
+      <span>&copy; 2026 POOD Laundry Co.</span>
+      <nav><a href='/privacy'>Privacy Policy</a><a href='/terms'>Terms of Service</a><a href='/contact'>Contact</a></nav>
+      <a href="mailto:hello@pood.co">hello@pood.co</a>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleFaq(btn){
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); const ic=i.querySelector('.icon'); if(ic) ic.textContent='+'; });
+    if(!wasOpen){ item.classList.add('open'); btn.querySelector('.icon').textContent = '\u2212'; }
+  }
+  function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString()
+    })
+    .then(() => {
+      form.style.display = 'none';
+      form.nextElementSibling.style.display = 'block';
+    })
+    .catch(() => {
+      alert("Something went wrong - please try again, or email hello@pood.co directly.");
+    });
+    return false;
+  }
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="b6b2a85f-f6bd-4d61-90bc-135df9ec29af" data-app-host="app.netlify.com" data-account-tier="free"></script>
